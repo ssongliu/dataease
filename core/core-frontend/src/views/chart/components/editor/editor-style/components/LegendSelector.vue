@@ -214,13 +214,10 @@ const changeLegendNumber = (prop?) => {
   prop ? changeMisc(prop) : ''
 }
 const changeRangeItem = (prop, index) => {
-  console.log(state.legendForm.miscForm.mapLegendCustomRange[index])
-  console.log(mapLegendCustomRangeCacheList[index])
   if (state.legendForm.miscForm.mapLegendCustomRange[index] === null) {
     state.legendForm.miscForm.mapLegendCustomRange[index] = cloneDeep(
       mapLegendCustomRangeCacheList[index]
     )
-    console.log(state.legendForm.miscForm.mapLegendCustomRange[index])
   }
   changeMisc(prop)
 }
